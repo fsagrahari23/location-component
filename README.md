@@ -7,7 +7,7 @@
 ## Setup GuideLines
 
 - After running "npm i"
-- Run "npm run otpimize"
+- Run "npm run optimize"
 - Then run "npm run dev"
 
 ## Things to do
