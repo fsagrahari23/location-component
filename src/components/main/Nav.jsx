@@ -6,20 +6,20 @@
 
 import { cn } from "@/lib/utils";
 import {
+  IconCalendarEvent,
+  IconCash,
+  IconHome,
+  IconPin,
+} from "@tabler/icons-react";
+import {
   AnimatePresence,
   motion,
   useMotionValue,
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-import {
-  IconPin,
-  IconHome,
-  IconCalendarEvent,
-  IconCash,
-} from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
 export const FloatingDock = ({ desktopClassName }) => {
   const links = [
@@ -49,7 +49,7 @@ export const FloatingDock = ({ desktopClassName }) => {
       icon: (
         <IconPin className="h-full w-full text-neutral-300" />
       ),
-      href: "#",
+      to: "/location",
     },
   ];
 
@@ -85,7 +85,7 @@ const FloatingDockDesktop = ({ items, className }) => {
   );
 };
 
-function IconContainer({ mouseX, title, icon, href }) {
+function IconContainer({ mouseX, title, icon, to }) {
   let ref = useRef(null);
 
   let distance = useTransform(mouseX, (val) => {
@@ -144,7 +144,7 @@ function IconContainer({ mouseX, title, icon, href }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href}>
+    <Link to={to}> {/* Use `to` instead of `href` */}
       <motion.div
         ref={ref}
         style={{ width, height }}
