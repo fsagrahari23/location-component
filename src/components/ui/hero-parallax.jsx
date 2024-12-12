@@ -193,7 +193,7 @@ export const Header = () => {
         className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white"
       >
         WELCOME TO <br />
-        ABHISHRGA 2025
+        ABHISARGA 2025
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 50 }}
