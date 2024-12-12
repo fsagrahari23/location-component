@@ -12,7 +12,7 @@ export const textVariants = {
     },
   },
   exit: {
-    scale: 1.5,
+    scale: 15,
     opacity: 0,
     transition: {
       duration: 0.8,

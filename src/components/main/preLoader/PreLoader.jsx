@@ -10,8 +10,8 @@ export const PreLoader = ({ onLoadingComplete }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-      setTimeout(onLoadingComplete, 1000);
-    }, 2500);
+      setTimeout(onLoadingComplete, 250);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);

@@ -3,79 +3,96 @@ import { useEffect, useState } from "react";
 export const heroImages = [
   {
     title: "Ahisarga - 2025",
+    key: "one",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/Abhisarga1.jpg",
   },
   {
     title: "Cultural Events",
+    key: "two",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/CulturalEvents1.jpg",
   },
   {
     title: "Pro Shows",
+    key: "three",
+
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/ProShow1.jpg",
   },
 
   {
     title: "Ahisarga - 2025",
+    key: "four",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/Abhisarga2.jpg",
   },
   {
     title: "Cultural Events",
+    key: "five",
+
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/CulturalEvents2.jpg",
   },
   {
     title: "Ahisarga - 2025",
+    key: "six",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/Abhisarga3.jpg",
   },
 
   {
     title: "Cultural Events",
+    key: "seven",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/CulturalEvents3.jpg",
   },
   {
     title: "CEO of Geek for Geeks - 2024",
+    key: "eight",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/CEO.jpg",
   },
   {
     title: "Cultural Events",
+    key: "nine",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/CulturalEvents4.jpg",
   },
   {
     title: "Pro Shows",
+    key: "ten",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/ProShow2.jpg",
   },
   {
     title: "Exciting Prizes",
+    key: "eleven",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/ExicitingPrizes1.jpg",
   },
 
   {
     title: "Exiciting Prizes",
+    key: "twelve",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/ExicitingPrizes2.jpg",
   },
   {
     title: "Pro Shows",
+    key: "thirteen",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/ProShow3.jpg",
   },
   {
     title: "Ahisarga - 2025",
+    key: "fourteen",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/Abhisarga5.jpg",
   },
   {
     title: "Ahisarga - 2025",
+    key: "fifteen",
     thumbnail:
       "https://raw.githubusercontent.com/Lokesh-Kudipudi/Abhisarga-2025-Hero-Section/refs/heads/main/src/assets/heroImages/Abhisarga4.jpg",
   },

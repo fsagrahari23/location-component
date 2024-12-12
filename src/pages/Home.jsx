@@ -6,32 +6,27 @@ import { useState } from "react";
 import { PreLoader } from "@/components/main/preLoader/PreLoader";
 
 const Home = () => {
-  const { isLoading: isLoadingImages, loadedImages } =
-    usePreloadImages();
+  const { isLoading, loadedImages } = usePreloadImages();
   const [isLoadingPreLoader, setIsLoadingPreLoader] =
     useState(true);
 
+  console.log("IMAGES", isLoading);
+  console.log("PreLoader", isLoadingPreLoader);
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 relative">
-      {isLoadingImages ? (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Loader></Loader>
-        </div>
-      ) : (
+      <PreLoader
+        onLoadingComplete={() =>
+          setIsLoadingPreLoader(() => false)
+        }
+      />
+      {!isLoadingPreLoader && isLoading && <Loader></Loader>}
+      {!isLoadingPreLoader && !isLoading && (
         <>
-          <PreLoader
-            onLoadingComplete={() =>
-              setIsLoadingPreLoader(() => false)
-            }
-          />
-          {!isLoadingPreLoader && (
-            <>
-              <div className="top-[85vh] left-[50vw] -translate-x-1/2 z-10 fixed">
-                <FloatingDock></FloatingDock>
-              </div>
-              <Hero products={loadedImages} />{" "}
-            </>
-          )}
+          <div className="top-[85vh] left-[50vw] -translate-x-1/2 z-10 fixed">
+            <FloatingDock></FloatingDock>
+          </div>
+          <Hero products={loadedImages} />
         </>
       )}
     </div>

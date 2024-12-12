@@ -145,7 +145,7 @@ export const HeroParallax = ({ products }) => {
           <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
             {firstRow.map((product) => (
               <MemoizedProductCard
-                key={product.title}
+                key={product.key}
                 product={product}
                 translate={translateX}
               />
@@ -156,7 +156,7 @@ export const HeroParallax = ({ products }) => {
           <motion.div className="flex flex-row mb-20 space-x-20">
             {secondRow.map((product) => (
               <MemoizedProductCard
-                key={product.title}
+                key={product.key}
                 product={product}
                 translate={translateXReverse}
               />
@@ -167,7 +167,7 @@ export const HeroParallax = ({ products }) => {
           <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
             {thirdRow.map((product) => (
               <MemoizedProductCard
-                key={product.title}
+                key={product.key}
                 product={product}
                 translate={translateX}
               />
