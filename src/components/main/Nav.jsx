@@ -25,40 +25,29 @@ export const FloatingDock = ({ desktopClassName }) => {
   const links = [
     {
       title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-300" />
-      ),
+      icon: <IconHome className="h-full w-full text-neutral-300" />,
       href: "#",
     },
     {
       title: "Sponsors",
-      icon: (
-        <IconCash className="h-full w-full text-neutral-300" />
-      ),
+      icon: <IconCash className="h-full w-full text-neutral-300" />,
       href: "#",
     },
     {
       title: "Events",
-      icon: (
-        <IconCalendarEvent className="h-full w-full  text-neutral-300" />
-      ),
-      href: "#",
+      icon: <IconCalendarEvent className="h-full w-full  text-neutral-300" />,
+      to: "/timeline",
     },
     {
       title: "Location",
-      icon: (
-        <IconPin className="h-full w-full text-neutral-300" />
-      ),
+      icon: <IconPin className="h-full w-full text-neutral-300" />,
       to: "/location",
     },
   ];
 
   return (
     <>
-      <FloatingDockDesktop
-        items={links}
-        className={desktopClassName}
-      />
+      <FloatingDockDesktop items={links} className={desktopClassName} />
     </>
   );
 };
@@ -75,11 +64,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       )}
     >
       {items.map((item) => (
-        <IconContainer
-          mouseX={mouseX}
-          key={item.title}
-          {...item}
-        />
+        <IconContainer mouseX={mouseX} key={item.title} {...item} />
       ))}
     </motion.div>
   );
@@ -97,22 +82,10 @@ function IconContainer({ mouseX, title, icon, to }) {
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthTransform = useTransform(
-    distance,
-    [-150, 0, 150],
-    [40, 80, 40]
-  );
-  let heightTransform = useTransform(
-    distance,
-    [-150, 0, 150],
-    [40, 80, 40]
-  );
+  let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
-  let widthTransformIcon = useTransform(
-    distance,
-    [-150, 0, 150],
-    [20, 40, 20]
-  );
+  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
   let heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
@@ -144,7 +117,9 @@ function IconContainer({ mouseX, title, icon, to }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link to={to}> {/* Use `to` instead of `href` */}
+    <Link to={to}>
+      {" "}
+      {/* Use `to` instead of `href` */}
       <motion.div
         ref={ref}
         style={{ width, height }}
